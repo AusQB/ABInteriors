@@ -18,6 +18,16 @@ thumbs/
 _thumbs/
 */expressionengine/cache/*
 
+# SublimeText
+*.sublime-project
+*.sublime-workspace
+*/sftp-config.json
+
+Assets
+Design
+
+www/absystem
+
 # =========================
 # Operating System Files
 # =========================

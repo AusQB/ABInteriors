@@ -1,0 +1,45 @@
+{layout="projects/.layout"}
+
+{if segment_2 != ''}
+
+{exp:channel:entries channel="projects"}
+<h1>{title}</h1>
+<div class="project-container">
+	{project_description}
+	<div class="slider-for">
+		{project_images}
+		<div>
+			<img data-interchange="[{image:url:zoom}, (default)], [{image:url:small}, (small)], [{image:url:medium}, (medium)], [{image:url:large}, (large)]" alt="{image:title}" />
+		</div>
+		{/project_images}
+	</div>
+	<div class="slider-nav">
+		{project_images}
+		<div class="slider-thumb">
+			<img data-interchange="[{image:url:zoom}, (default)], [{image:url:small}, (small)], [{image:url:medium}, (medium)], [{image:url:large}, (large)]" alt="{image:title}" />
+		</div>
+		{/project_images}
+	</div>
+</div>
+{/exp:channel:entries}
+
+{if:else}
+
+<h1>Projects</h1>
+
+<div id="project-list">
+<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
+{exp:channel:entries channel="projects"}
+<li>
+	<a href="{url_title_path='projects'}">
+		<h2 class="project-list-title">{title}</h2>
+		{project_images cover_only="yes"}
+		<img data-interchange="[{image:url:zoom}, (default)], [{image:url:small}, (small)], [{image:url:medium}, (medium)], [{image:url:large}, (large)]" alt="{image:title}" />
+		{/project_images}
+	</a>
+</li>
+{/exp:channel:entries}
+</ul>
+</div>
+
+{/if}

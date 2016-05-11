@@ -1,0 +1,46 @@
+/*
+    You can define new styles for basic elements such as h1, h2, p, ul etc that
+    will be used in the Wyvern field, and resemble how it displays on the front
+    end of your site. The styles will not be selectable unless they are added
+    to wysiwyg.js
+*/
+
+img.float_left {
+    float: left; 
+    margin: 0 1em 1em 0;
+}
+
+img.float_right {
+    float: right;
+    margin: 0 0 1em 1em;
+}
+
+p.quote {
+    background: rgba(0, 0, 0, 0.1);
+    color: #484848;
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+	margin: 2rem 0;
+    padding: 20px 40px;
+}
+
+@media only screen and (min-width: 640px) {
+
+	p.quote {
+		margin: 2rem;
+	}
+
+}
+
+
+
+
+
+/* This is here only for Wyvern testing. */
+
+/*
+h1, h2, h3, h4, p {
+	font-family: "fertigo-pro-1","fertigo-pro-2";
+}
+*/
